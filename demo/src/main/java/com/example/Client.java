@@ -18,23 +18,26 @@ public class Client {
             do{
                 message = input.nextLine();
             }while(!message.equals("accept") && !message.equals("exit"));
-            System.out.println("Scrivi la prima cifra:");
-            double n1 = input.nextDouble();
-            input.nextLine();
-            System.out.println("Scrivi la seconda cifra:");
-            double n2 = input.nextDouble();
-            input.nextLine();
-            System.out.println("Scrivi l'operatore (+;-;/;*):");
-            String operatore = input.nextLine();
+            if(message.equals("exit")){
+                s.close();
+            }else{
+                System.out.println("Scrivi la prima cifra:");
+                double n1 = input.nextDouble();
+                input.nextLine();
+                System.out.println("Scrivi la seconda cifra:");
+                double n2 = input.nextDouble();
+                input.nextLine();
+                System.out.println("Scrivi l'operatore (+;-;/;*):");
+                String operatore = input.nextLine();
 
-            out.println(message);
-            out.println(n1);
-            out.println(n2);
-            out.println(operatore);
-            
-            String risposta = in.readLine();
-            System.out.println(risposta);
-
+                out.println(message);
+                out.println(n1);
+                out.println(n2);
+                out.println(operatore);
+                
+                String risposta = in.readLine();
+                System.out.println(risposta);
+            }
             s.close();
        } catch (IOException e) {
         e.printStackTrace();
